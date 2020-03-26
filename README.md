@@ -33,26 +33,27 @@
 在你的`Podfile`文件中添加
 
 ```ruby
-pod 'SimpleStoreData', '0.0.1'
+pod 'SimpleStoreData', '0.0.2'
 ```
 
 ### Carthage
 在你的`Cartfile`文件中添加
 
 ```
-github "skytoup/SimpleStoreData" ~> 0.0.1
+github "skytoup/SimpleStoreData" ~> 0.0.2
 ```
 
 ### Swift Package Manager
 在你的`Package.swift`文件中添加到`dependencies`内
 
 ```swift
-.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.0.1"))
+.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.0.2"))
 ```
 
 
 ## 用法
 
+#### 基本使用
 场景: 存储登录用户的数据(存储到UserDefault)
 > Example/Example/main.swift
 
@@ -151,6 +152,19 @@ print("batchUpdate \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
 userM.item = UserStoreItem()
 print("重置数据 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
 // 重置数据 ["age": 0, "name": , "gender": 0]
+```
+
+#### Store的PropertyWrapper用法
+> 详情请参考`Example/Example/main.swift`
+
+```Swift
+/// 使用`PropertyWrapper`特性`SimpleStoreUDW`实现自己的`class`或`struct`一次性包含多个`StoreItem`
+class AppManager {
+    static let shared = AppManager()
+    
+    @SimpleStoreUDW<UserStoreItem>(udKey: "__AppUser__") var user
+    @SimpleStoreUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
+}
 ```
 
 ## 开源协议(MIT)

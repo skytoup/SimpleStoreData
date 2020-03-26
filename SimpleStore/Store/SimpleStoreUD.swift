@@ -47,3 +47,37 @@ open class SimpleStoreUD<Item: SimpleStoreUDItem>: SimpleStore {
         item = _item
     }
 }
+
+@propertyWrapper
+public class SimpleStoreUDW<Item: SimpleStoreUDItem>: SimpleStore {
+    public let ud: UserDefaults
+    public let udKey: String
+    
+    public var item: Item {
+        /// `struct`修改触发`didSet`, 从而触发存储
+        /// 如果`item`的类型不是`struct`, 修改item的数据无法触发`didSet`
+        didSet {
+            let newDatas = item.archive()
+            ud.set(newDatas, forKey: udKey)
+        }
+    }
+    
+    public var wrappedValue: Item {
+        get {
+            item
+        }
+        set {
+            item = newValue
+        }
+    }
+    
+    public init(_ ud: UserDefaults = .standard, udKey: String) {
+        precondition(!udKey.isEmpty, "udKey is empty")
+        
+        self.ud = ud
+        self.udKey = udKey
+        item = Item(datas: [:])
+        
+        assert(Mirror(reflecting: item).displayStyle == .struct, "item need is a struct")
+    }
+}

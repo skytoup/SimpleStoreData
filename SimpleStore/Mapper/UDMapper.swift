@@ -24,7 +24,9 @@ public struct EvalUDMapper: UDMapper {
 
 /// 字典映射 - `字典`的数据赋值到`字段`
 public struct AssignUDMapper: UDMapper {
-    public let dict: [Key: Value]
+    /// dict: [Key: Value]在XCode11.4编译提示`Reference to invalid associated type 'Key' of type 'AssignUDMapper'`
+    /// 暂时这样写, 旧 `public let dict: [Key: Value]`
+    public let dict: [String: Any]
     
     public init(dict: [Key: Value] = [Key: Value]()) {
         self.dict = dict

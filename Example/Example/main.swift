@@ -41,37 +41,69 @@ struct UserStoreItem: SimpleStoreUDItem {
     }
 }
 
+struct SettingStoreItem: SimpleStoreUDItem {
+    @UDMapperParam(key: "enableDark", default: false) var isEnableDark
+    
+    mutating func mapValue<Mapper>(_ mapper: inout Mapper) where Mapper : DictMapper, SettingStoreItem.Key == Mapper.Key, SettingStoreItem.Value == Mapper.Value {
+        mapper <- _isEnableDark
+    }
+}
+
 class UserManager: SimpleStoreUD<UserStoreItem> {
     static let shared = UserManager(udKey: "__User__")
     
     // 这里可以添加一些业务方法
 }
 
-
-
-var userM = UserManager.shared
-// 清空之前的数据
-userM.ud.set(nil, forKey: userM.udKey)
-
-// 提示: 一次性更新多个字段最好是使用方法`batchUpdate`
-userM[\.name] = "sky"
-print("第一次修改 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
-
-userM[\.age] = 18
-print("第二次修改 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
-
-userM[\.gender] = .male
-print("第三次修改 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
-
-
-// 批量修改字段再存储
-userM.batchUpdate { item in
-    item.name = "yks"
-    item.age = 81
-    item.gender = .female
+/// 使用`PropertyWrapper`特性`SimpleStoreUDW`实现自己的`class`或`struct`一次性包含多个`StoreItem`
+class AppManager {
+    static let shared = AppManager()
+    
+    @SimpleStoreUDW<UserStoreItem>(udKey: "__AppUser__") var user
+    @SimpleStoreUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
 }
-print("batchUpdate \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
 
-// 相当于重置数据
-userM.item = UserStoreItem()
-print("重置数据 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
+
+func example_0() {
+    var userM = UserManager.shared
+    // 清空之前的数据
+    userM.ud.set(nil, forKey: userM.udKey)
+
+    // 提示: 一次性更新多个字段最好是使用方法`batchUpdate`
+    userM[\.name] = "sky"
+    print("第一次修改 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
+
+    userM[\.age] = 18
+    print("第二次修改 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
+
+    userM[\.gender] = .male
+    print("第三次修改 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
+
+
+    // 批量修改字段再存储
+    userM.batchUpdate { item in
+        item.name = "yks"
+        item.age = 81
+        item.gender = .female
+    }
+    print("batchUpdate \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
+
+    // 相当于重置数据
+    userM.item = UserStoreItem()
+    print("重置数据 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
+}
+
+func example_1() {
+    let am = AppManager.shared
+    
+    print("user修改前 \(UserDefaults.standard.dictionary(forKey: "__AppUser__") ?? [:])")
+    am.user.age = 1024
+    print("user修改后 \(UserDefaults.standard.dictionary(forKey: "__AppUser__") ?? [:])")
+    
+    print("setting修改前 \(UserDefaults.standard.dictionary(forKey: "__AppSetting__") ?? [:])")
+    am.setting.isEnableDark = true
+    print("setting修改后 \(UserDefaults.standard.dictionary(forKey: "__AppSetting__") ?? [:])")
+}
+
+example_0()
+example_1()

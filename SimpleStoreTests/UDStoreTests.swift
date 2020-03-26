@@ -14,6 +14,7 @@ class UDStoreTests: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         AppManager.shared.cleanDatas()
+        MyAppManager.shared.cleanDatas()
     }
 
     override func tearDown() {
@@ -51,6 +52,27 @@ class UDStoreTests: XCTestCase {
         XCTAssert(
             udDict?["build"] as? Int == build &&
             udDict?["version"] as? String == version
+        )
+    }
+    
+    func testStoreWrapper() {
+        let build = 1
+        let version = "0.0.2"
+        
+        let am = MyAppManager.shared
+        
+        am.appStoreA.build = build
+        am.appStoreA.version = version
+        am.appStoreB.build = build
+        am.appStoreB.version = version
+        
+        let udDictA = MyAppManager.ud.dictionary(forKey: MyAppManager.AppStoreAKey)
+        let udDictB = MyAppManager.ud.dictionary(forKey: MyAppManager.AppStoreBKey)
+        XCTAssert(
+            udDictA?["build"] as? Int == build &&
+            udDictA?["version"] as? String == version &&
+            udDictB?["build"] as? Int == build &&
+            udDictB?["version"] as? String == version
         )
     }
 }

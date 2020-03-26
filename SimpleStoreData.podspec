@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleStoreData'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Swift编写的数据存储简化(暂时只有存储到UserDefault)'
 
   s.description      = <<-DESC

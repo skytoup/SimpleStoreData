@@ -21,3 +21,20 @@ class AppManager: SimpleStoreUD<AppUDItem> {
         ud.set(nil, forKey: udKey)
     }
 }
+
+
+class MyAppManager {
+    static let ud = UserDefaults.standard
+    static let AppStoreAKey = "__my_app_a__"
+    static let AppStoreBKey = "__my_app_b__"
+    
+    @SimpleStoreUDW<AppUDItem>(ud, udKey: AppStoreAKey) var appStoreA
+    @SimpleStoreUDW<AppUDItem>(ud, udKey: AppStoreBKey) var appStoreB
+    
+    static let shared = MyAppManager()
+    
+    func cleanDatas() {
+        UserDefaults.standard.set(nil, forKey: "__my_app_a__")
+        UserDefaults.standard.set(nil, forKey: "__my_app_b__")
+    }
+}

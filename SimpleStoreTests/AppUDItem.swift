@@ -17,5 +17,4 @@ struct AppUDItem: SimpleStoreUDItem {
         mapper <- _version
         mapper <- _build
     }
-
 }
