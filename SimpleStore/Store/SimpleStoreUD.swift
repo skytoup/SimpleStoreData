@@ -1,15 +1,16 @@
 //
-//  UDSimpleStore.swift
+//  SimpleStoreUD.swift
 //  SimpleStore
 //
-//  Created by skytoup on 2020/3/17.
+//  Created by skytoup on 2020/4/26.
 //  Copyright © 2020 skytoup. All rights reserved.
 //
 
 import Foundation
 
 /// 使用`UserDefault`的简单存储
-open class SimpleStoreUD<Item: SimpleStoreUDItem>: SimpleStore {
+/// 不可直接使用, 其实是相当于抽象类
+open class SimpleStoreUD<Item: StoreItem>: SimpleStore {
     public let ud: UserDefaults
     public let udKey: String
     
@@ -20,9 +21,17 @@ open class SimpleStoreUD<Item: SimpleStoreUDItem>: SimpleStore {
         /// `struct`修改触发`didSet`, 从而触发存储
         /// 如果`item`的类型不是`struct`, 修改item的数据无法触发`didSet`
         didSet {
-            let newDatas = item.archive()
-            ud.set(newDatas, forKey: udKey)
+            didSetItem()
         }
+    }
+    
+    /// 初始化一个Item, 需要子类实现
+    /// - Parameters:
+    ///   - key: UserDefault key
+    ///   - ud: user default
+    /// - Returns:
+    class func initItem(with udKey: String, ud: UserDefaults) -> Item {
+        fatalError("need subclass implement")
     }
     
     /// 初始化
@@ -34,9 +43,13 @@ open class SimpleStoreUD<Item: SimpleStoreUDItem>: SimpleStore {
         
         self.ud = ud
         self.udKey = udKey
-        item = Item(datas: ud.dictionary(forKey: udKey) ?? [:])
         
+        item = Self.initItem(with: udKey, ud: ud)
         assert(Mirror(reflecting: item).displayStyle == .struct, "item need is a struct")
+    }
+    
+    /// Item数据变更
+    func didSetItem() {
     }
     
     /// 批量更新`item`的数据
@@ -46,18 +59,5 @@ open class SimpleStoreUD<Item: SimpleStoreUDItem>: SimpleStore {
         block(&_item)
         item = _item
     }
-}
 
-@propertyWrapper
-public class SimpleStoreUDW<Item: SimpleStoreUDItem>: SimpleStoreUD<Item> {
-    
-    public var wrappedValue: Item {
-        get {
-            item
-        }
-        set {
-            item = newValue
-        }
-    }
-    
 }

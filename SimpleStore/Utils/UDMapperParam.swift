@@ -17,7 +17,7 @@ public struct UDMapperParam<T> {
     
     /// 初始化
     /// - Parameters:
-    ///   - key: `字段`存储到`字典`的`Key`
+    ///   - key: `字段`存储到`dict`的`Key`
     ///   - value: 处理无法取值时使用的的默认值
     public init(key: String, default value: T) {
         self.key = key
@@ -26,12 +26,8 @@ public struct UDMapperParam<T> {
     }
     
     public var wrappedValue: T {
-        get {
-            value
-        }
-        set {
-            value = newValue
-        }
+        get { value }
+        set { value = newValue }
     }
 }
 

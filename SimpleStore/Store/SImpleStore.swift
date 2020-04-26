@@ -10,13 +10,13 @@ import Foundation
 
 /// 简单定义存储的基本字段
 public protocol SimpleStore {
-    associatedtype Item: SimpleStoreItem
+    associatedtype Item
 
     var item: Item { get set }
 }
 
-/// 通过`subscript`+`keypath`简便获取`item`的数据
 extension SimpleStore {
+    /// 通过`subscript`+`keypath`简便获取`item`的数据
     public subscript<T>(keyPath: WritableKeyPath<Item, T>) -> T {
         get {
             item[keyPath: keyPath]

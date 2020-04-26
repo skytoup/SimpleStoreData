@@ -9,14 +9,14 @@
 import Foundation
 
 /// 字典映射
-/// 把一些`字段`的数据取出到`字典`, 或者把`字典`的数据赋值到`字段`
+/// 把一些`字段`的数据取出到`dict`, 或者把`dict`的数据赋值到`字段`
 public protocol DictMapper {
     associatedtype Key: Hashable
     associatedtype Value
 
     var dict: [Key: Value] { get }
     
-    /// `字段`的数据取值到`字典` 或 `字典`的数据赋值`字段`
+    /// `字段`的数据取值到`dict` 或 `dict`的数据赋值`字段`
     /// - Parameters:
     ///   - field: 操作的字段
     ///   - key: 字典对应的`key`
@@ -24,7 +24,7 @@ public protocol DictMapper {
     mutating func map<T>(_ field: inout T, key: Key, default defaultValue: T)
 }
 
-/// 字典映射 - `字段`的数据取值到`字典`
+/// 字典映射 - `字段`的数据取值到`dict`
 public struct EvalDictMapper<Key: Hashable, Value>: DictMapper {
     private(set) public var dict = [Key: Value]()
 
@@ -37,7 +37,7 @@ public struct EvalDictMapper<Key: Hashable, Value>: DictMapper {
     }
 }
 
-/// 字典映射 - `字典`的数据赋值到`字段`
+/// 字典映射 - `dict`的数据赋值到`字段`
 public struct AssignDictMapper<Key: Hashable, Value>: DictMapper {
     public let dict: [Key: Value]
 

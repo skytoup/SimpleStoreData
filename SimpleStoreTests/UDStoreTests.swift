@@ -13,15 +13,17 @@ class UDStoreTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        AppManager.shared.cleanDatas()
-        MyAppManager.shared.cleanDatas()
+        AppManager.shared.resetDatas()
+        AppManager2.shared.resetDatas()
+        UserDictManager.shared.resetDatas()
+        UserDataManager.shared.resetDatas()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testUpdate() {
+    func testDictUDUpdate() {
         let build = 1
         let version = "0.0.2"
         
@@ -37,7 +39,7 @@ class UDStoreTests: XCTestCase {
         )
     }
 
-    func testBatchUpdate() {
+    func testDictUDBatchUpdate() {
         let build = 1
         let version = "0.0.2"
         
@@ -55,19 +57,96 @@ class UDStoreTests: XCTestCase {
         )
     }
     
+    func testCodableDefault() {
+        let userManager = UserDictManager.shared
+        
+        XCTAssert(
+            userManager[\.age] == nil &&
+            userManager[\.name] == "default"
+        )
+    }
+    
+    func testCodableDictUpdate() {
+        let age = 16
+        let name = "HelloWorld"
+        
+        var userManager = UserDictManager.shared
+        
+        userManager[\.age] = age
+        userManager[\.name] = name
+        
+        let udDict = userManager.ud.dictionary(forKey: UserDictManager.UDKey)
+        XCTAssert(
+            udDict?["age"] as? Int == age &&
+            udDict?["name"] as? String == name
+        )
+    }
+    
+    func testCodableDictBatchUpdate() {
+        let age = 16
+        let name = "HelloWorld"
+        
+        let userManager = UserDictManager.shared
+        
+        userManager.batchUpdate { item in
+            item.age = age
+            item.name = name
+        }
+        
+        let udDict = userManager.ud.dictionary(forKey: UserDictManager.UDKey)
+        XCTAssert(
+            udDict?["age"] as? Int == age &&
+            udDict?["name"] as? String == name
+        )
+    }
+    
+    func testCodableDataUpdate() {
+        let age = 16
+        let name = "HelloWorld"
+        
+        var userManager = UserDataManager.shared
+        
+        userManager[\.age] = age
+        userManager[\.name] = name
+        
+        let udDict = userManager.ud.dictionary(forKey: UserDataManager.UDKey)
+        XCTAssert(
+            udDict?["age"] as? Int == age &&
+            udDict?["name"] as? String == name
+        )
+    }
+    
+    func testCodableDataBatchUpdate() {
+        let age = 16
+        let name = "HelloWorld"
+        
+        let userManager = UserDataManager.shared
+        
+        userManager.batchUpdate { item in
+            item.age = age
+            item.name = name
+        }
+        
+        let udDict = userManager.ud.dictionary(forKey: UserDataManager.UDKey)
+        XCTAssert(
+            udDict?["age"] as? Int == age &&
+            udDict?["name"] as? String == name
+        )
+    }
+    
     func testStoreWrapper() {
         let build = 1
         let version = "0.0.2"
         
-        let am = MyAppManager.shared
+        let am = AppManager2.shared
         
         am.appStoreA.build = build
         am.appStoreA.version = version
         am.appStoreB.build = build
         am.appStoreB.version = version
         
-        let udDictA = MyAppManager.ud.dictionary(forKey: MyAppManager.AppStoreAKey)
-        let udDictB = MyAppManager.ud.dictionary(forKey: MyAppManager.AppStoreBKey)
+        let udDictA = AppManager2.ud.dictionary(forKey: AppManager2.AppStoreAKey)
+        let udDictB = AppManager2.ud.dictionary(forKey: AppManager2.AppStoreBKey)
         XCTAssert(
             udDictA?["build"] as? Int == build &&
             udDictA?["version"] as? String == version &&
@@ -75,4 +154,5 @@ class UDStoreTests: XCTestCase {
             udDictB?["version"] as? String == version
         )
     }
+    
 }

@@ -9,11 +9,11 @@
 import Foundation
 @testable import SimpleStore
 
-struct AppUDItem: SimpleStoreUDItem {
+struct AppUDMapperStoreItem: UDMapperStoreItem {
     @UDMapperParam(key: "version", default: "") var version
     @UDMapperParam(key: "build", default: 0) var build
     
-    mutating func mapValue<Mapper>(_ mapper: inout Mapper) where Mapper : DictMapper, AppUDItem.Key == Mapper.Key, AppUDItem.Value == Mapper.Value {
+    mutating func mapValue<Mapper>(_ mapper: inout Mapper) where Mapper : DictMapper, Key == Mapper.Key, Value == Mapper.Value {
         mapper <- _version
         mapper <- _build
     }

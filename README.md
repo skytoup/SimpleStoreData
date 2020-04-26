@@ -14,6 +14,11 @@
 - UserDefault
 - ...
 
+## 支持的存储结构
+- Dictionary
+- Codable
+- ...
+
 ## 示例
 
 请参考仓库的`Example`目录
@@ -22,6 +27,7 @@
 - Swift
 	- 5.1
 	- 5.2
+	- ...
 - iOS 9.0+ (更低或许也可以, 但是暂未测试)
 - macOS 10.13+ (更低或许也可以, 但是暂未测试)
 - watchOS 5.0+ (更低或许也可以, 但是暂未测试)
@@ -33,21 +39,21 @@
 在你的`Podfile`文件中添加
 
 ```ruby
-pod 'SimpleStoreData', '0.0.3'
+pod 'SimpleStoreData', '0.1.0'
 ```
 
 ### Carthage
 在你的`Cartfile`文件中添加
 
 ```
-github "skytoup/SimpleStoreData" ~> 0.0.3
+github "skytoup/SimpleStoreData" ~> 0.1.0
 ```
 
 ### Swift Package Manager
 在你的`Package.swift`文件中添加到`dependencies`内
 
 ```swift
-.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.0.3"))
+.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.1.0"))
 ```
 
 
@@ -56,6 +62,8 @@ github "skytoup/SimpleStoreData" ~> 0.0.3
 #### 基本使用
 场景: 存储登录用户的数据(存储到UserDefault)
 > Example/Example/main.swift
+> 
+> CodableDictStoreItem、CodableDataStoreItem这里就不演示, 请到上面的文件查看具体用法
 
 定义一个用户性别的枚举, 因为`UserDefault`不支持直接存储`enum`, 所以需要实现`UDCoding`
 
@@ -91,11 +99,11 @@ extension Gender: UDCoding {
 }
 ```
 
-定义存储用户数据的字段(**重点提示: SimpleStoreItem必须使用struct实现**), 字段使用`UDMapperParam`属性包装定义, 再实现`mapValue`方法进行数据映射
+定义存储用户数据的字段(**重点提示: StoreItem必须使用struct实现**), 字段使用`UDMapperParam`属性包装定义, 再实现`mapValue`方法进行数据映射
 
 ```Swift
-/// **重点提示: SimpleStoreItem必须使用struct实现**
-struct UserStoreItem: SimpleStoreUDItem {
+/// **重点提示: StoreItem必须使用struct实现**
+struct UserStoreItem: UDMapperStoreItem {
     @UDMapperParam(key: "name", default: "") var name
     @UDMapperParam(key: "age", default: 0) var age
     @UDMapperParam(key: "gender", default: Gender.unknown) var gender
@@ -111,7 +119,7 @@ struct UserStoreItem: SimpleStoreUDItem {
 定义管理`StoreItem`的管理类(此处简单使用单例, 可根据自己的业务进行调整, `manager`也可定义更多业务方法)
 
 ```Swift
-class UserManager: SimpleStoreUD<UserStoreItem> {
+class UserManager: SimpleStoreDictUD<UserStoreItem> {
     static let shared = UserManager(udKey: "__User__")
     
     // 这里可以添加一些业务方法
@@ -166,6 +174,7 @@ class AppManager {
     @SimpleStoreUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
 }
 ```
+
 
 ## 开源协议(MIT)
 

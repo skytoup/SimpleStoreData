@@ -9,7 +9,7 @@
 import Foundation
 @testable import SimpleStore
 
-class AppManager: SimpleStoreUD<AppUDItem> {
+class AppManager: SimpleStoreDictUD<AppUDMapperStoreItem> {
     static let UDKey = "__app__"
     static let shared = AppManager(udKey: UDKey)
     
@@ -17,24 +17,21 @@ class AppManager: SimpleStoreUD<AppUDItem> {
         item = Item()
     }
     
-    func cleanDatas() {
-        ud.set(nil, forKey: udKey)
-    }
 }
 
-
-class MyAppManager {
+class AppManager2 {
     static let ud = UserDefaults.standard
-    static let AppStoreAKey = "__my_app_a__"
-    static let AppStoreBKey = "__my_app_b__"
+    static let AppStoreAKey = "__app_a__"
+    static let AppStoreBKey = "__app_b__"
     
-    @SimpleStoreUDW<AppUDItem>(ud, udKey: AppStoreAKey) var appStoreA
-    @SimpleStoreUDW<AppUDItem>(ud, udKey: AppStoreBKey) var appStoreB
+    @SimpleStoreDictUDW<AppUDMapperStoreItem>(ud, udKey: AppStoreAKey) var appStoreA
+    @SimpleStoreDictUDW<AppUDMapperStoreItem>(ud, udKey: AppStoreBKey) var appStoreB
     
-    static let shared = MyAppManager()
+    static let shared = AppManager2()
     
-    func cleanDatas() {
-        UserDefaults.standard.set(nil, forKey: "__my_app_a__")
-        UserDefaults.standard.set(nil, forKey: "__my_app_b__")
+    func resetDatas() {
+        appStoreA = AppUDMapperStoreItem()
+        appStoreB = AppUDMapperStoreItem()
     }
+    
 }

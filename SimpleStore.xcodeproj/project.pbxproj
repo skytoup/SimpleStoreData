@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18ACDDC42454321A00723DAE /* DictStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDC32454321A00723DAE /* DictStoreItem.swift */; };
+		18ACDDC52454321A00723DAE /* DictStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDC32454321A00723DAE /* DictStoreItem.swift */; };
+		18ACDDC62454321A00723DAE /* DictStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDC32454321A00723DAE /* DictStoreItem.swift */; };
+		18ACDDC8245435FF00723DAE /* DictMapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDC7245435FF00723DAE /* DictMapValue.swift */; };
+		18ACDDC9245435FF00723DAE /* DictMapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDC7245435FF00723DAE /* DictMapValue.swift */; };
+		18ACDDCA245435FF00723DAE /* DictMapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDC7245435FF00723DAE /* DictMapValue.swift */; };
+		18ACDDCC24543D5800723DAE /* CodableDictStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDCB24543D5800723DAE /* CodableDictStoreItem.swift */; };
+		18ACDDCD24543D5800723DAE /* CodableDictStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDCB24543D5800723DAE /* CodableDictStoreItem.swift */; };
+		18ACDDCE24543D5800723DAE /* CodableDictStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDCB24543D5800723DAE /* CodableDictStoreItem.swift */; };
+		18ACDDF52454775700723DAE /* UserStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDF42454775700723DAE /* UserStoreItem.swift */; };
+		18ACDDF62454775700723DAE /* UserStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDF42454775700723DAE /* UserStoreItem.swift */; };
+		18ACDDF82454780900723DAE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDF72454780900723DAE /* UserManager.swift */; };
+		18ACDDF92454780900723DAE /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDF72454780900723DAE /* UserManager.swift */; };
+		18ACDDFB24547A6900723DAE /* MeasureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDFA24547A6900723DAE /* MeasureTests.swift */; };
+		18ACDDFC24547A6900723DAE /* MeasureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACDDFA24547A6900723DAE /* MeasureTests.swift */; };
 		18B2CBF52420BEB500104613 /* SimpleStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B2CBEB2420BEB500104613 /* SimpleStore.framework */; };
 		18B2CBFC2420BEB500104613 /* SimpleStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B2CBEE2420BEB500104613 /* SimpleStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18B2CC222420BF5E00104613 /* UDCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC212420BF5E00104613 /* UDCoding.swift */; };
@@ -14,23 +29,36 @@
 		18B2CC292420C3AD00104613 /* UDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC282420C3AD00104613 /* UDMapper.swift */; };
 		18B2CC2C2420C45800104613 /* UDMapperParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2B2420C45800104613 /* UDMapperParam.swift */; };
 		18B2CC2F2420C5AF00104613 /* SimpleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2E2420C5AF00104613 /* SimpleStore.swift */; };
-		18B2CC342420C64A00104613 /* SimpleStoreDictItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* SimpleStoreDictItem.swift */; };
-		18B2CC3B2420C92F00104613 /* SimpleStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC392420C92F00104613 /* SimpleStoreItem.swift */; };
-		18B2CC3C2420C92F00104613 /* SimpleStoreUDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* SimpleStoreUDItem.swift */; };
-		18B2CC3E2420C96100104613 /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreUD.swift */; };
+		18B2CC342420C64A00104613 /* DictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */; };
+		18B2CC3C2420C92F00104613 /* UDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */; };
+		18B2CC3E2420C96100104613 /* SimpleStoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */; };
 		18B2CC402420DCEB00104613 /* MapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3F2420DCEB00104613 /* MapperTests.swift */; };
-		18D5C2972420E42500DBDC13 /* AppDictItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2962420E42500DBDC13 /* AppDictItem.swift */; };
-		18D5C2992420E69700DBDC13 /* AppUDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2982420E69700DBDC13 /* AppUDItem.swift */; };
+		18BCFB582455BB270064D17C /* DataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB572455BB270064D17C /* DataStoreItem.swift */; };
+		18BCFB592455BB270064D17C /* DataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB572455BB270064D17C /* DataStoreItem.swift */; };
+		18BCFB5A2455BB270064D17C /* DataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB572455BB270064D17C /* DataStoreItem.swift */; };
+		18BCFB5C2455BC520064D17C /* CodableDataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */; };
+		18BCFB5D2455BC520064D17C /* CodableDataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */; };
+		18BCFB5E2455BC520064D17C /* CodableDataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */; };
+		18BCFB602455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */; };
+		18BCFB612455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */; };
+		18BCFB622455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */; };
+		18BCFB642455CD170064D17C /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* SimpleStoreUD.swift */; };
+		18BCFB652455CD170064D17C /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* SimpleStoreUD.swift */; };
+		18BCFB662455CD170064D17C /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* SimpleStoreUD.swift */; };
+		18BCFB682455CD8B0064D17C /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB672455CD8B0064D17C /* StoreItem.swift */; };
+		18BCFB692455CD8B0064D17C /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB672455CD8B0064D17C /* StoreItem.swift */; };
+		18BCFB6A2455CD8B0064D17C /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB672455CD8B0064D17C /* StoreItem.swift */; };
+		18D5C2972420E42500DBDC13 /* AppDictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2962420E42500DBDC13 /* AppDictMapperStoreItem.swift */; };
+		18D5C2992420E69700DBDC13 /* AppUDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2982420E69700DBDC13 /* AppUDMapperStoreItem.swift */; };
 		18D5C29B2420E71B00DBDC13 /* StoreItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C29A2420E71B00DBDC13 /* StoreItemTest.swift */; };
 		18D5C29D2420E9C800DBDC13 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C29C2420E9C800DBDC13 /* AppManager.swift */; };
 		18D5C29F2420EACE00DBDC13 /* UDStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C29E2420EACE00DBDC13 /* UDStoreTests.swift */; };
 		18D5C2AE2420ECF900DBDC13 /* SimpleStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D5C2A52420ECF900DBDC13 /* SimpleStore.framework */; };
 		18D5C2B52420ECF900DBDC13 /* SimpleStore_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D5C2A72420ECF900DBDC13 /* SimpleStore_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18D5C2BC2420ED2600DBDC13 /* SimpleStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC392420C92F00104613 /* SimpleStoreItem.swift */; };
-		18D5C2BD2420ED2600DBDC13 /* SimpleStoreDictItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* SimpleStoreDictItem.swift */; };
-		18D5C2BE2420ED2600DBDC13 /* SimpleStoreUDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* SimpleStoreUDItem.swift */; };
+		18D5C2BD2420ED2600DBDC13 /* DictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */; };
+		18D5C2BE2420ED2600DBDC13 /* UDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */; };
 		18D5C2BF2420ED2600DBDC13 /* SimpleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2E2420C5AF00104613 /* SimpleStore.swift */; };
-		18D5C2C02420ED2600DBDC13 /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreUD.swift */; };
+		18D5C2C02420ED2600DBDC13 /* SimpleStoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */; };
 		18D5C2C12420ED2600DBDC13 /* UDCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC212420BF5E00104613 /* UDCoding.swift */; };
 		18D5C2C22420ED2600DBDC13 /* DictMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC252420C29400104613 /* DictMapper.swift */; };
 		18D5C2C32420ED2600DBDC13 /* UDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC282420C3AD00104613 /* UDMapper.swift */; };
@@ -38,15 +66,14 @@
 		18D5C2C52420ED3A00DBDC13 /* MapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3F2420DCEB00104613 /* MapperTests.swift */; };
 		18D5C2C62420ED3A00DBDC13 /* StoreItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C29A2420E71B00DBDC13 /* StoreItemTest.swift */; };
 		18D5C2C72420ED3A00DBDC13 /* UDStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C29E2420EACE00DBDC13 /* UDStoreTests.swift */; };
-		18D5C2C82420ED3A00DBDC13 /* AppDictItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2962420E42500DBDC13 /* AppDictItem.swift */; };
-		18D5C2C92420ED3A00DBDC13 /* AppUDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2982420E69700DBDC13 /* AppUDItem.swift */; };
+		18D5C2C82420ED3A00DBDC13 /* AppDictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2962420E42500DBDC13 /* AppDictMapperStoreItem.swift */; };
+		18D5C2C92420ED3A00DBDC13 /* AppUDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C2982420E69700DBDC13 /* AppUDMapperStoreItem.swift */; };
 		18D5C2CA2420ED3A00DBDC13 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C29C2420E9C800DBDC13 /* AppManager.swift */; };
 		18D5C2D42420EDAB00DBDC13 /* SimpleStore_Watch.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D5C2D22420EDAB00DBDC13 /* SimpleStore_Watch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18D5C2D82420EE3400DBDC13 /* SimpleStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC392420C92F00104613 /* SimpleStoreItem.swift */; };
-		18D5C2D92420EE3400DBDC13 /* SimpleStoreDictItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* SimpleStoreDictItem.swift */; };
-		18D5C2DA2420EE3400DBDC13 /* SimpleStoreUDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* SimpleStoreUDItem.swift */; };
+		18D5C2D92420EE3400DBDC13 /* DictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */; };
+		18D5C2DA2420EE3400DBDC13 /* UDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */; };
 		18D5C2DB2420EE3400DBDC13 /* SimpleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2E2420C5AF00104613 /* SimpleStore.swift */; };
-		18D5C2DC2420EE3400DBDC13 /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreUD.swift */; };
+		18D5C2DC2420EE3400DBDC13 /* SimpleStoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */; };
 		18D5C2DD2420EE3400DBDC13 /* UDCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC212420BF5E00104613 /* UDCoding.swift */; };
 		18D5C2DE2420EE3400DBDC13 /* DictMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC252420C29400104613 /* DictMapper.swift */; };
 		18D5C2DF2420EE3400DBDC13 /* UDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC282420C3AD00104613 /* UDMapper.swift */; };
@@ -71,6 +98,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18ACDDC32454321A00723DAE /* DictStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictStoreItem.swift; sourceTree = "<group>"; };
+		18ACDDC7245435FF00723DAE /* DictMapValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictMapValue.swift; sourceTree = "<group>"; };
+		18ACDDCB24543D5800723DAE /* CodableDictStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDictStoreItem.swift; sourceTree = "<group>"; };
+		18ACDDF42454775700723DAE /* UserStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoreItem.swift; sourceTree = "<group>"; };
+		18ACDDF72454780900723DAE /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		18ACDDFA24547A6900723DAE /* MeasureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureTests.swift; sourceTree = "<group>"; };
 		18B2CBEB2420BEB500104613 /* SimpleStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B2CBEE2420BEB500104613 /* SimpleStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleStore.h; sourceTree = "<group>"; };
 		18B2CBEF2420BEB500104613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,13 +114,17 @@
 		18B2CC282420C3AD00104613 /* UDMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDMapper.swift; sourceTree = "<group>"; };
 		18B2CC2B2420C45800104613 /* UDMapperParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDMapperParam.swift; sourceTree = "<group>"; };
 		18B2CC2E2420C5AF00104613 /* SimpleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStore.swift; sourceTree = "<group>"; };
-		18B2CC332420C64A00104613 /* SimpleStoreDictItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreDictItem.swift; sourceTree = "<group>"; };
-		18B2CC392420C92F00104613 /* SimpleStoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleStoreItem.swift; path = SimpleStore/StoreItem/SimpleStoreItem.swift; sourceTree = SOURCE_ROOT; };
-		18B2CC3A2420C92F00104613 /* SimpleStoreUDItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleStoreUDItem.swift; path = SimpleStore/StoreItem/SimpleStoreUDItem.swift; sourceTree = SOURCE_ROOT; };
-		18B2CC3D2420C96100104613 /* SimpleStoreUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStoreUD.swift; sourceTree = "<group>"; };
+		18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictMapperStoreItem.swift; sourceTree = "<group>"; };
+		18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UDMapperStoreItem.swift; path = SimpleStore/StoreItem/UDMapperStoreItem.swift; sourceTree = SOURCE_ROOT; };
+		18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStoreDictUD.swift; sourceTree = "<group>"; };
 		18B2CC3F2420DCEB00104613 /* MapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperTests.swift; sourceTree = "<group>"; };
-		18D5C2962420E42500DBDC13 /* AppDictItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDictItem.swift; sourceTree = "<group>"; };
-		18D5C2982420E69700DBDC13 /* AppUDItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUDItem.swift; sourceTree = "<group>"; };
+		18BCFB572455BB270064D17C /* DataStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreItem.swift; sourceTree = "<group>"; };
+		18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDataStoreItem.swift; sourceTree = "<group>"; };
+		18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreDataUD.swift; sourceTree = "<group>"; };
+		18BCFB632455CD170064D17C /* SimpleStoreUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreUD.swift; sourceTree = "<group>"; };
+		18BCFB672455CD8B0064D17C /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		18D5C2962420E42500DBDC13 /* AppDictMapperStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDictMapperStoreItem.swift; sourceTree = "<group>"; };
+		18D5C2982420E69700DBDC13 /* AppUDMapperStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUDMapperStoreItem.swift; sourceTree = "<group>"; };
 		18D5C29A2420E71B00DBDC13 /* StoreItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemTest.swift; sourceTree = "<group>"; };
 		18D5C29C2420E9C800DBDC13 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		18D5C29E2420EACE00DBDC13 /* UDStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDStoreTests.swift; sourceTree = "<group>"; };
@@ -185,9 +222,12 @@
 				18B2CC3F2420DCEB00104613 /* MapperTests.swift */,
 				18D5C29A2420E71B00DBDC13 /* StoreItemTest.swift */,
 				18D5C29E2420EACE00DBDC13 /* UDStoreTests.swift */,
-				18D5C2962420E42500DBDC13 /* AppDictItem.swift */,
-				18D5C2982420E69700DBDC13 /* AppUDItem.swift */,
+				18ACDDFA24547A6900723DAE /* MeasureTests.swift */,
+				18D5C2962420E42500DBDC13 /* AppDictMapperStoreItem.swift */,
+				18D5C2982420E69700DBDC13 /* AppUDMapperStoreItem.swift */,
+				18ACDDF42454775700723DAE /* UserStoreItem.swift */,
 				18D5C29C2420E9C800DBDC13 /* AppManager.swift */,
+				18ACDDF72454780900723DAE /* UserManager.swift */,
 				18B2CBFB2420BEB500104613 /* Info.plist */,
 			);
 			path = SimpleStoreTests;
@@ -199,6 +239,7 @@
 				18B2CC252420C29400104613 /* DictMapper.swift */,
 				18B2CC282420C3AD00104613 /* UDMapper.swift */,
 				18B2CC212420BF5E00104613 /* UDCoding.swift */,
+				18ACDDC7245435FF00723DAE /* DictMapValue.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -215,7 +256,9 @@
 			isa = PBXGroup;
 			children = (
 				18B2CC2E2420C5AF00104613 /* SimpleStore.swift */,
-				18B2CC3D2420C96100104613 /* SimpleStoreUD.swift */,
+				18BCFB632455CD170064D17C /* SimpleStoreUD.swift */,
+				18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */,
+				18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -223,9 +266,13 @@
 		18B2CC302420C5CA00104613 /* StoreItem */ = {
 			isa = PBXGroup;
 			children = (
-				18B2CC392420C92F00104613 /* SimpleStoreItem.swift */,
-				18B2CC332420C64A00104613 /* SimpleStoreDictItem.swift */,
-				18B2CC3A2420C92F00104613 /* SimpleStoreUDItem.swift */,
+				18BCFB672455CD8B0064D17C /* StoreItem.swift */,
+				18ACDDC32454321A00723DAE /* DictStoreItem.swift */,
+				18BCFB572455BB270064D17C /* DataStoreItem.swift */,
+				18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */,
+				18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */,
+				18ACDDCB24543D5800723DAE /* CodableDictStoreItem.swift */,
+				18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */,
 			);
 			path = StoreItem;
 			sourceTree = "<group>";
@@ -469,13 +516,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B2CC3B2420C92F00104613 /* SimpleStoreItem.swift in Sources */,
-				18B2CC3E2420C96100104613 /* SimpleStoreUD.swift in Sources */,
-				18B2CC3C2420C92F00104613 /* SimpleStoreUDItem.swift in Sources */,
-				18B2CC342420C64A00104613 /* SimpleStoreDictItem.swift in Sources */,
+				18ACDDCC24543D5800723DAE /* CodableDictStoreItem.swift in Sources */,
+				18BCFB642455CD170064D17C /* SimpleStoreUD.swift in Sources */,
+				18B2CC3E2420C96100104613 /* SimpleStoreDictUD.swift in Sources */,
+				18ACDDC42454321A00723DAE /* DictStoreItem.swift in Sources */,
+				18B2CC3C2420C92F00104613 /* UDMapperStoreItem.swift in Sources */,
+				18BCFB5C2455BC520064D17C /* CodableDataStoreItem.swift in Sources */,
+				18BCFB682455CD8B0064D17C /* StoreItem.swift in Sources */,
+				18ACDDC8245435FF00723DAE /* DictMapValue.swift in Sources */,
+				18B2CC342420C64A00104613 /* DictMapperStoreItem.swift in Sources */,
 				18B2CC262420C29400104613 /* DictMapper.swift in Sources */,
 				18B2CC2C2420C45800104613 /* UDMapperParam.swift in Sources */,
+				18BCFB582455BB270064D17C /* DataStoreItem.swift in Sources */,
 				18B2CC222420BF5E00104613 /* UDCoding.swift in Sources */,
+				18BCFB602455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */,
 				18B2CC2F2420C5AF00104613 /* SimpleStore.swift in Sources */,
 				18B2CC292420C3AD00104613 /* UDMapper.swift in Sources */,
 			);
@@ -485,12 +539,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D5C2972420E42500DBDC13 /* AppDictItem.swift in Sources */,
+				18ACDDFB24547A6900723DAE /* MeasureTests.swift in Sources */,
+				18D5C2972420E42500DBDC13 /* AppDictMapperStoreItem.swift in Sources */,
+				18ACDDF52454775700723DAE /* UserStoreItem.swift in Sources */,
 				18D5C29D2420E9C800DBDC13 /* AppManager.swift in Sources */,
 				18B2CC402420DCEB00104613 /* MapperTests.swift in Sources */,
 				18D5C29B2420E71B00DBDC13 /* StoreItemTest.swift in Sources */,
 				18D5C29F2420EACE00DBDC13 /* UDStoreTests.swift in Sources */,
-				18D5C2992420E69700DBDC13 /* AppUDItem.swift in Sources */,
+				18ACDDF82454780900723DAE /* UserManager.swift in Sources */,
+				18D5C2992420E69700DBDC13 /* AppUDMapperStoreItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,13 +555,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D5C2BC2420ED2600DBDC13 /* SimpleStoreItem.swift in Sources */,
-				18D5C2BD2420ED2600DBDC13 /* SimpleStoreDictItem.swift in Sources */,
-				18D5C2BE2420ED2600DBDC13 /* SimpleStoreUDItem.swift in Sources */,
+				18ACDDCD24543D5800723DAE /* CodableDictStoreItem.swift in Sources */,
+				18BCFB652455CD170064D17C /* SimpleStoreUD.swift in Sources */,
+				18D5C2BD2420ED2600DBDC13 /* DictMapperStoreItem.swift in Sources */,
+				18ACDDC52454321A00723DAE /* DictStoreItem.swift in Sources */,
+				18D5C2BE2420ED2600DBDC13 /* UDMapperStoreItem.swift in Sources */,
+				18BCFB5D2455BC520064D17C /* CodableDataStoreItem.swift in Sources */,
+				18BCFB692455CD8B0064D17C /* StoreItem.swift in Sources */,
+				18ACDDC9245435FF00723DAE /* DictMapValue.swift in Sources */,
 				18D5C2BF2420ED2600DBDC13 /* SimpleStore.swift in Sources */,
-				18D5C2C02420ED2600DBDC13 /* SimpleStoreUD.swift in Sources */,
+				18D5C2C02420ED2600DBDC13 /* SimpleStoreDictUD.swift in Sources */,
 				18D5C2C12420ED2600DBDC13 /* UDCoding.swift in Sources */,
+				18BCFB592455BB270064D17C /* DataStoreItem.swift in Sources */,
 				18D5C2C22420ED2600DBDC13 /* DictMapper.swift in Sources */,
+				18BCFB612455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */,
 				18D5C2C32420ED2600DBDC13 /* UDMapper.swift in Sources */,
 				18D5C2C42420ED2600DBDC13 /* UDMapperParam.swift in Sources */,
 			);
@@ -514,11 +578,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D5C2C82420ED3A00DBDC13 /* AppDictItem.swift in Sources */,
+				18ACDDFC24547A6900723DAE /* MeasureTests.swift in Sources */,
+				18D5C2C82420ED3A00DBDC13 /* AppDictMapperStoreItem.swift in Sources */,
+				18ACDDF62454775700723DAE /* UserStoreItem.swift in Sources */,
 				18D5C2C62420ED3A00DBDC13 /* StoreItemTest.swift in Sources */,
 				18D5C2C72420ED3A00DBDC13 /* UDStoreTests.swift in Sources */,
 				18D5C2CA2420ED3A00DBDC13 /* AppManager.swift in Sources */,
-				18D5C2C92420ED3A00DBDC13 /* AppUDItem.swift in Sources */,
+				18D5C2C92420ED3A00DBDC13 /* AppUDMapperStoreItem.swift in Sources */,
+				18ACDDF92454780900723DAE /* UserManager.swift in Sources */,
 				18D5C2C52420ED3A00DBDC13 /* MapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,13 +594,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D5C2D82420EE3400DBDC13 /* SimpleStoreItem.swift in Sources */,
-				18D5C2D92420EE3400DBDC13 /* SimpleStoreDictItem.swift in Sources */,
-				18D5C2DA2420EE3400DBDC13 /* SimpleStoreUDItem.swift in Sources */,
+				18ACDDCE24543D5800723DAE /* CodableDictStoreItem.swift in Sources */,
+				18BCFB662455CD170064D17C /* SimpleStoreUD.swift in Sources */,
+				18D5C2D92420EE3400DBDC13 /* DictMapperStoreItem.swift in Sources */,
+				18ACDDC62454321A00723DAE /* DictStoreItem.swift in Sources */,
+				18D5C2DA2420EE3400DBDC13 /* UDMapperStoreItem.swift in Sources */,
+				18BCFB5E2455BC520064D17C /* CodableDataStoreItem.swift in Sources */,
+				18BCFB6A2455CD8B0064D17C /* StoreItem.swift in Sources */,
+				18ACDDCA245435FF00723DAE /* DictMapValue.swift in Sources */,
 				18D5C2DB2420EE3400DBDC13 /* SimpleStore.swift in Sources */,
-				18D5C2DC2420EE3400DBDC13 /* SimpleStoreUD.swift in Sources */,
+				18D5C2DC2420EE3400DBDC13 /* SimpleStoreDictUD.swift in Sources */,
 				18D5C2DD2420EE3400DBDC13 /* UDCoding.swift in Sources */,
+				18BCFB5A2455BB270064D17C /* DataStoreItem.swift in Sources */,
 				18D5C2DE2420EE3400DBDC13 /* DictMapper.swift in Sources */,
+				18BCFB622455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */,
 				18D5C2DF2420EE3400DBDC13 /* UDMapper.swift in Sources */,
 				18D5C2E02420EE3400DBDC13 /* UDMapperParam.swift in Sources */,
 			);
@@ -678,6 +752,7 @@
 		18B2CC002420BEB500104613 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -708,6 +783,7 @@
 		18B2CC012420BEB500104613 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -738,6 +814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SimpleStoreTests/Info.plist;
@@ -763,6 +840,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SimpleStoreTests/Info.plist;
