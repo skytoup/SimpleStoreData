@@ -3,6 +3,21 @@ All notable changes to this project will be documented in this file.
 ~~`SimpleStoreData` adheres to [Semantic Versioning](https://semver.org/).~~(暂时未稳定, 可能会改动类名、方法名等...)
 
 
+## [0.1.1](https://github.com/skytoup/SimpleStoreData/releases/tag/0.1.1)
+Released on 2020-04-28
+
+#### Added
+- 增加`StoreKeychain`, 把`DataItem`存储在`Keychain`
+
+#### Updated
+- 缩短类名
+    - `SimpleStoreDataUD` -> `StoreDataUD`
+    - `SimpleStoreDataUDW` -> `StoreDataUDW`
+    - `SimpleStoreDictUD` -> `StoreDictUD`
+    - `SimpleStoreDictUD` -> `StoreDictUDW`
+
+---
+
 ## [0.1.0](https://github.com/skytoup/SimpleStoreData/releases/tag/0.1.0)
 Released on 2020-04-26
 
@@ -13,14 +28,14 @@ Released on 2020-04-26
 
 #### Updated
 - 重命名的协议
-	- `SimpleStoreUDItem` -> `UDMapperStoreItem`
-	- `SimpleStoreDictItem` -> `DictMapperStoreItem`
+    - `SimpleStoreUDItem` -> `UDMapperStoreItem`
+    - `SimpleStoreDictItem` -> `DictMapperStoreItem`
 - 重命名的类
-	- `SimpleStoreUD` -> `SimpleStoreDictUD`
+    - `SimpleStoreUD` -> `SimpleStoreDictUD`
 - 重构
-	- `SimpleStoreDictUD `分离出新的`SimpleStoreUD`
-	- `SimpleStoreDictItem` 分离出`DictMapValue`
-	- 原`SimpleStoreDictItem`实际变更为`DictMapperStoreItem `
+    - `SimpleStoreDictUD `分离出新的`SimpleStoreUD`
+    - `SimpleStoreDictItem` 分离出`DictMapValue`
+    - 原`SimpleStoreDictItem`实际变更为`DictMapperStoreItem `
 
 ---
 

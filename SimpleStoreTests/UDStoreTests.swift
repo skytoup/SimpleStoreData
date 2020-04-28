@@ -16,7 +16,7 @@ class UDStoreTests: XCTestCase {
         AppManager.shared.resetDatas()
         AppManager2.shared.resetDatas()
         UserDictManager.shared.resetDatas()
-        UserDataManager.shared.resetDatas()
+        UserDataUDManager.shared.resetDatas()
     }
 
     override func tearDown() {
@@ -43,7 +43,7 @@ class UDStoreTests: XCTestCase {
         let build = 1
         let version = "0.0.2"
         
-        let appManager = AppManager.shared
+        var appManager = AppManager.shared
         
         appManager.batchUpdate { item in
             item.build = build
@@ -86,7 +86,7 @@ class UDStoreTests: XCTestCase {
         let age = 16
         let name = "HelloWorld"
         
-        let userManager = UserDictManager.shared
+        var userManager = UserDictManager.shared
         
         userManager.batchUpdate { item in
             item.age = age
@@ -104,12 +104,12 @@ class UDStoreTests: XCTestCase {
         let age = 16
         let name = "HelloWorld"
         
-        var userManager = UserDataManager.shared
+        var userManager = UserDataUDManager.shared
         
         userManager[\.age] = age
         userManager[\.name] = name
         
-        let udDict = userManager.ud.dictionary(forKey: UserDataManager.UDKey)
+        let udDict = userManager.ud.dictionary(forKey: UserDataUDManager.UDKey)
         XCTAssert(
             udDict?["age"] as? Int == age &&
             udDict?["name"] as? String == name
@@ -120,14 +120,14 @@ class UDStoreTests: XCTestCase {
         let age = 16
         let name = "HelloWorld"
         
-        let userManager = UserDataManager.shared
+        var userManager = UserDataUDManager.shared
         
         userManager.batchUpdate { item in
             item.age = age
             item.name = name
         }
         
-        let udDict = userManager.ud.dictionary(forKey: UserDataManager.UDKey)
+        let udDict = userManager.ud.dictionary(forKey: UserDataUDManager.UDKey)
         XCTAssert(
             udDict?["age"] as? Int == age &&
             udDict?["name"] as? String == name

@@ -9,7 +9,7 @@
 import Foundation
 
 /// `dict`作为中转, 使用`UserDefault`的简单存储
-open class SimpleStoreDictUD<Item: DictStoreItem>: SimpleStoreUD<Item> {
+open class StoreDictUD<Item: DictStoreItem>: StoreUD<Item> {
     
     override class func initItem(with udKey: String, ud: UserDefaults) -> Item {
         let datas = (ud.dictionary(forKey: udKey) ?? [:]) as [Item.Key: Item.Value]
@@ -24,7 +24,7 @@ open class SimpleStoreDictUD<Item: DictStoreItem>: SimpleStoreUD<Item> {
 }
 
 @propertyWrapper
-public class SimpleStoreDictUDW<Item: DictStoreItem>: SimpleStoreDictUD<Item> {
+public class StoreDictUDW<Item: DictStoreItem>: StoreDictUD<Item> {
     
     public var wrappedValue: Item {
         get { item }

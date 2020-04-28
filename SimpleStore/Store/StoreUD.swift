@@ -10,7 +10,7 @@ import Foundation
 
 /// 使用`UserDefault`的简单存储
 /// 不可直接使用, 其实是相当于抽象类
-open class SimpleStoreUD<Item: StoreItem>: SimpleStore {
+open class StoreUD<Item: StoreItem>: SimpleStore {
     public let ud: UserDefaults
     public let udKey: String
     
@@ -50,14 +50,6 @@ open class SimpleStoreUD<Item: StoreItem>: SimpleStore {
     
     /// Item数据变更
     func didSetItem() {
-    }
-    
-    /// 批量更新`item`的数据
-    /// - Parameter block:
-    public func batchUpdate(_ block: (_ item: inout Item) -> Void) {
-        var _item = item
-        block(&_item)
-        item = _item
     }
 
 }

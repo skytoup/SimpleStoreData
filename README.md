@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/cocoapods/l/SimpleStoreData.svg?style=flat)](https://cocoapods.org/pods/SimpleStoreData)
 [![Platform](https://img.shields.io/cocoapods/p/SimpleStoreData.svg?style=flat)](https://cocoapods.org/pods/SimpleStoreData)
 
-`SimpleStoreData`一个纯Swift的框架, 为了更简单、更结构化地存储和读写数据, 提供多种数据存储方式选择(暂时只有UserDefault)。
+`SimpleStoreData`一个纯Swift的框架, 为了更简单、更结构化地存储和读写数据, 提供多种数据存储方式选择。
 
 ## 支持的存储方式
 - UserDefault
@@ -39,21 +39,21 @@
 在你的`Podfile`文件中添加
 
 ```ruby
-pod 'SimpleStoreData', '0.1.0'
+pod 'SimpleStoreData', '0.1.1'
 ```
 
 ### Carthage
 在你的`Cartfile`文件中添加
 
 ```
-github "skytoup/SimpleStoreData" ~> 0.1.0
+github "skytoup/SimpleStoreData" ~> 0.1.1
 ```
 
 ### Swift Package Manager
 在你的`Package.swift`文件中添加到`dependencies`内
 
 ```swift
-.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.1.0"))
+.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.1.1"))
 ```
 
 
@@ -63,7 +63,7 @@ github "skytoup/SimpleStoreData" ~> 0.1.0
 场景: 存储登录用户的数据(存储到UserDefault)
 > Example/Example/main.swift
 > 
-> CodableDictStoreItem、CodableDataStoreItem这里就不演示, 请到上面的文件查看具体用法
+> CodableDictStoreItem、CodableDataStoreItem、StoreKeychain这里就不演示, 请到上面的文件查看具体用法
 
 定义一个用户性别的枚举, 因为`UserDefault`不支持直接存储`enum`, 所以需要实现`UDCoding`
 
@@ -119,7 +119,7 @@ struct UserStoreItem: UDMapperStoreItem {
 定义管理`StoreItem`的管理类(此处简单使用单例, 可根据自己的业务进行调整, `manager`也可定义更多业务方法)
 
 ```Swift
-class UserManager: SimpleStoreDictUD<UserStoreItem> {
+class UserManager: StoreDictUD<UserStoreItem> {
     static let shared = UserManager(udKey: "__User__")
     
     // 这里可以添加一些业务方法
@@ -166,12 +166,12 @@ print("重置数据 \(userM.ud.dictionary(forKey: userM.udKey) ?? [:])")
 > 详情请参考`Example/Example/main.swift`
 
 ```Swift
-/// 使用`PropertyWrapper`特性`SimpleStoreUDW`实现自己的`class`或`struct`一次性包含多个`StoreItem`
+/// 使用`PropertyWrapper`特性`StoreUDW`实现自己的`class`或`struct`一次性包含多个`StoreItem`
 class AppManager {
     static let shared = AppManager()
     
-    @SimpleStoreUDW<UserStoreItem>(udKey: "__AppUser__") var user
-    @SimpleStoreUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
+    @StoreDictUDW<UserStoreItem>(udKey: "__AppUser__") var user
+    @StoreDictUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
 }
 ```
 

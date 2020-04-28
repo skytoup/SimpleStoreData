@@ -25,4 +25,12 @@ extension SimpleStore {
             item[keyPath: keyPath] = value
         }
     }
+    
+    /// 批量更新`item`的数据
+    /// - Parameter block:
+    public mutating func batchUpdate(_ block: (_ item: inout Item) -> Void) {
+        var _item = item
+        block(&_item)
+        item = _item
+    }
 }

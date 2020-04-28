@@ -9,7 +9,7 @@
 import Foundation
 
 /// `data`作为中转, 使用`UserDefault`的简单存储
-open class SimpleStoreDataUD<Item: DataStoreItem>: SimpleStoreUD<Item> {
+open class StoreDataUD<Item: DataStoreItem>: StoreUD<Item> {
     
     override class func initItem(with udKey: String, ud: UserDefaults) -> Item {
         let datas = ud.data(forKey: udKey) ?? Data()
@@ -25,7 +25,7 @@ open class SimpleStoreDataUD<Item: DataStoreItem>: SimpleStoreUD<Item> {
 }
 
 @propertyWrapper
-public class SimpleStoreDataUDW<Item: DataStoreItem>: SimpleStoreDataUD<Item> {
+public class StoreDataUDW<Item: DataStoreItem>: StoreDataUD<Item> {
     
     public var wrappedValue: Item {
         get { item }

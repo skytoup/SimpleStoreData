@@ -9,7 +9,7 @@
 import Foundation
 @testable import SimpleStore
 
-class AppManager: SimpleStoreDictUD<AppUDMapperStoreItem> {
+class AppManager: StoreDictUD<AppUDMapperStoreItem> {
     static let UDKey = "__app__"
     static let shared = AppManager(udKey: UDKey)
     
@@ -24,8 +24,8 @@ class AppManager2 {
     static let AppStoreAKey = "__app_a__"
     static let AppStoreBKey = "__app_b__"
     
-    @SimpleStoreDictUDW<AppUDMapperStoreItem>(ud, udKey: AppStoreAKey) var appStoreA
-    @SimpleStoreDictUDW<AppUDMapperStoreItem>(ud, udKey: AppStoreBKey) var appStoreB
+    @StoreDictUDW<AppUDMapperStoreItem>(ud, udKey: AppStoreAKey) var appStoreA
+    @StoreDictUDW<AppUDMapperStoreItem>(ud, udKey: AppStoreBKey) var appStoreB
     
     static let shared = AppManager2()
     

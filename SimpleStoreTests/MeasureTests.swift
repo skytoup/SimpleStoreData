@@ -36,7 +36,7 @@ class MeasureTests: XCTestCase {
     
     func testPerformanceUDCodableDataSimpleWrite() throws {
         self.measure {
-            UserDataManager.shared.item.name = "Simple Test"
+            UserDataUDManager.shared.item.name = "Simple Test"
         }
     }
 }

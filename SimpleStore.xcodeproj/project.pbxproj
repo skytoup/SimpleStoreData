@@ -31,7 +31,7 @@
 		18B2CC2F2420C5AF00104613 /* SimpleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2E2420C5AF00104613 /* SimpleStore.swift */; };
 		18B2CC342420C64A00104613 /* DictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */; };
 		18B2CC3C2420C92F00104613 /* UDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */; };
-		18B2CC3E2420C96100104613 /* SimpleStoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */; };
+		18B2CC3E2420C96100104613 /* StoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* StoreDictUD.swift */; };
 		18B2CC402420DCEB00104613 /* MapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3F2420DCEB00104613 /* MapperTests.swift */; };
 		18BCFB582455BB270064D17C /* DataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB572455BB270064D17C /* DataStoreItem.swift */; };
 		18BCFB592455BB270064D17C /* DataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB572455BB270064D17C /* DataStoreItem.swift */; };
@@ -39,12 +39,12 @@
 		18BCFB5C2455BC520064D17C /* CodableDataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */; };
 		18BCFB5D2455BC520064D17C /* CodableDataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */; };
 		18BCFB5E2455BC520064D17C /* CodableDataStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */; };
-		18BCFB602455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */; };
-		18BCFB612455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */; };
-		18BCFB622455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */; };
-		18BCFB642455CD170064D17C /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* SimpleStoreUD.swift */; };
-		18BCFB652455CD170064D17C /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* SimpleStoreUD.swift */; };
-		18BCFB662455CD170064D17C /* SimpleStoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* SimpleStoreUD.swift */; };
+		18BCFB602455BEF30064D17C /* StoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* StoreDataUD.swift */; };
+		18BCFB612455BEF30064D17C /* StoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* StoreDataUD.swift */; };
+		18BCFB622455BEF30064D17C /* StoreDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB5F2455BEF30064D17C /* StoreDataUD.swift */; };
+		18BCFB642455CD170064D17C /* StoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* StoreUD.swift */; };
+		18BCFB652455CD170064D17C /* StoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* StoreUD.swift */; };
+		18BCFB662455CD170064D17C /* StoreUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB632455CD170064D17C /* StoreUD.swift */; };
 		18BCFB682455CD8B0064D17C /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB672455CD8B0064D17C /* StoreItem.swift */; };
 		18BCFB692455CD8B0064D17C /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB672455CD8B0064D17C /* StoreItem.swift */; };
 		18BCFB6A2455CD8B0064D17C /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCFB672455CD8B0064D17C /* StoreItem.swift */; };
@@ -58,7 +58,7 @@
 		18D5C2BD2420ED2600DBDC13 /* DictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */; };
 		18D5C2BE2420ED2600DBDC13 /* UDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */; };
 		18D5C2BF2420ED2600DBDC13 /* SimpleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2E2420C5AF00104613 /* SimpleStore.swift */; };
-		18D5C2C02420ED2600DBDC13 /* SimpleStoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */; };
+		18D5C2C02420ED2600DBDC13 /* StoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* StoreDictUD.swift */; };
 		18D5C2C12420ED2600DBDC13 /* UDCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC212420BF5E00104613 /* UDCoding.swift */; };
 		18D5C2C22420ED2600DBDC13 /* DictMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC252420C29400104613 /* DictMapper.swift */; };
 		18D5C2C32420ED2600DBDC13 /* UDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC282420C3AD00104613 /* UDMapper.swift */; };
@@ -73,11 +73,19 @@
 		18D5C2D92420EE3400DBDC13 /* DictMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */; };
 		18D5C2DA2420EE3400DBDC13 /* UDMapperStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */; };
 		18D5C2DB2420EE3400DBDC13 /* SimpleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2E2420C5AF00104613 /* SimpleStore.swift */; };
-		18D5C2DC2420EE3400DBDC13 /* SimpleStoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */; };
+		18D5C2DC2420EE3400DBDC13 /* StoreDictUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC3D2420C96100104613 /* StoreDictUD.swift */; };
 		18D5C2DD2420EE3400DBDC13 /* UDCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC212420BF5E00104613 /* UDCoding.swift */; };
 		18D5C2DE2420EE3400DBDC13 /* DictMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC252420C29400104613 /* DictMapper.swift */; };
 		18D5C2DF2420EE3400DBDC13 /* UDMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC282420C3AD00104613 /* UDMapper.swift */; };
 		18D5C2E02420EE3400DBDC13 /* UDMapperParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2CC2B2420C45800104613 /* UDMapperParam.swift */; };
+		18FA58FF2458041300E0F356 /* StoreKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA58FE2458041300E0F356 /* StoreKeychain.swift */; };
+		18FA59002458041300E0F356 /* StoreKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA58FE2458041300E0F356 /* StoreKeychain.swift */; };
+		18FA59012458041300E0F356 /* StoreKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA58FE2458041300E0F356 /* StoreKeychain.swift */; };
+		18FA590324581A5600E0F356 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA590224581A5600E0F356 /* Keychain.swift */; };
+		18FA590424581A5600E0F356 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA590224581A5600E0F356 /* Keychain.swift */; };
+		18FA590524581A5600E0F356 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA590224581A5600E0F356 /* Keychain.swift */; };
+		18FA59072458248D00E0F356 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA59062458248D00E0F356 /* KeychainTests.swift */; };
+		18FA59082458248D00E0F356 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA59062458248D00E0F356 /* KeychainTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,12 +124,12 @@
 		18B2CC2E2420C5AF00104613 /* SimpleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStore.swift; sourceTree = "<group>"; };
 		18B2CC332420C64A00104613 /* DictMapperStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictMapperStoreItem.swift; sourceTree = "<group>"; };
 		18B2CC3A2420C92F00104613 /* UDMapperStoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UDMapperStoreItem.swift; path = SimpleStore/StoreItem/UDMapperStoreItem.swift; sourceTree = SOURCE_ROOT; };
-		18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStoreDictUD.swift; sourceTree = "<group>"; };
+		18B2CC3D2420C96100104613 /* StoreDictUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDictUD.swift; sourceTree = "<group>"; };
 		18B2CC3F2420DCEB00104613 /* MapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperTests.swift; sourceTree = "<group>"; };
 		18BCFB572455BB270064D17C /* DataStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreItem.swift; sourceTree = "<group>"; };
 		18BCFB5B2455BC520064D17C /* CodableDataStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDataStoreItem.swift; sourceTree = "<group>"; };
-		18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreDataUD.swift; sourceTree = "<group>"; };
-		18BCFB632455CD170064D17C /* SimpleStoreUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStoreUD.swift; sourceTree = "<group>"; };
+		18BCFB5F2455BEF30064D17C /* StoreDataUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataUD.swift; sourceTree = "<group>"; };
+		18BCFB632455CD170064D17C /* StoreUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUD.swift; sourceTree = "<group>"; };
 		18BCFB672455CD8B0064D17C /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		18D5C2962420E42500DBDC13 /* AppDictMapperStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDictMapperStoreItem.swift; sourceTree = "<group>"; };
 		18D5C2982420E69700DBDC13 /* AppUDMapperStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUDMapperStoreItem.swift; sourceTree = "<group>"; };
@@ -136,6 +144,9 @@
 		18D5C2D02420EDAB00DBDC13 /* SimpleStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D5C2D22420EDAB00DBDC13 /* SimpleStore_Watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleStore_Watch.h; sourceTree = "<group>"; };
 		18D5C2D32420EDAB00DBDC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FA58FE2458041300E0F356 /* StoreKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKeychain.swift; sourceTree = "<group>"; };
+		18FA590224581A5600E0F356 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		18FA59062458248D00E0F356 /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +233,7 @@
 				18B2CC3F2420DCEB00104613 /* MapperTests.swift */,
 				18D5C29A2420E71B00DBDC13 /* StoreItemTest.swift */,
 				18D5C29E2420EACE00DBDC13 /* UDStoreTests.swift */,
+				18FA59062458248D00E0F356 /* KeychainTests.swift */,
 				18ACDDFA24547A6900723DAE /* MeasureTests.swift */,
 				18D5C2962420E42500DBDC13 /* AppDictMapperStoreItem.swift */,
 				18D5C2982420E69700DBDC13 /* AppUDMapperStoreItem.swift */,
@@ -248,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				18B2CC2B2420C45800104613 /* UDMapperParam.swift */,
+				18FA590224581A5600E0F356 /* Keychain.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -256,9 +269,10 @@
 			isa = PBXGroup;
 			children = (
 				18B2CC2E2420C5AF00104613 /* SimpleStore.swift */,
-				18BCFB632455CD170064D17C /* SimpleStoreUD.swift */,
-				18B2CC3D2420C96100104613 /* SimpleStoreDictUD.swift */,
-				18BCFB5F2455BEF30064D17C /* SimpleStoreDataUD.swift */,
+				18BCFB632455CD170064D17C /* StoreUD.swift */,
+				18B2CC3D2420C96100104613 /* StoreDictUD.swift */,
+				18BCFB5F2455BEF30064D17C /* StoreDataUD.swift */,
+				18FA58FE2458041300E0F356 /* StoreKeychain.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 				18B2CBF02420BEB500104613 /* Sources */,
 				18B2CBF12420BEB500104613 /* Frameworks */,
 				18B2CBF22420BEB500104613 /* Resources */,
+				18FA59092458273500E0F356 /* Run Script Codesign */,
 			);
 			buildRules = (
 			);
@@ -394,6 +409,7 @@
 				18D5C2A92420ECF900DBDC13 /* Sources */,
 				18D5C2AA2420ECF900DBDC13 /* Frameworks */,
 				18D5C2AB2420ECF900DBDC13 /* Resources */,
+				18FA590A2458275200E0F356 /* Run Script Codesign */,
 			);
 			buildRules = (
 			);
@@ -511,16 +527,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18FA59092458273500E0F356 /* Run Script Codesign */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script Codesign";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "codesign --verify --force --sign \"$CODE_SIGN_IDENTITY\" \"$CODESIGNING_FOLDER_PATH\"\n";
+		};
+		18FA590A2458275200E0F356 /* Run Script Codesign */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script Codesign";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "codesign --verify --force --sign \"$CODE_SIGN_IDENTITY\" \"$CODESIGNING_FOLDER_PATH\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18B2CBE72420BEB500104613 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18ACDDCC24543D5800723DAE /* CodableDictStoreItem.swift in Sources */,
-				18BCFB642455CD170064D17C /* SimpleStoreUD.swift in Sources */,
-				18B2CC3E2420C96100104613 /* SimpleStoreDictUD.swift in Sources */,
+				18BCFB642455CD170064D17C /* StoreUD.swift in Sources */,
+				18B2CC3E2420C96100104613 /* StoreDictUD.swift in Sources */,
 				18ACDDC42454321A00723DAE /* DictStoreItem.swift in Sources */,
 				18B2CC3C2420C92F00104613 /* UDMapperStoreItem.swift in Sources */,
+				18FA590324581A5600E0F356 /* Keychain.swift in Sources */,
 				18BCFB5C2455BC520064D17C /* CodableDataStoreItem.swift in Sources */,
 				18BCFB682455CD8B0064D17C /* StoreItem.swift in Sources */,
 				18ACDDC8245435FF00723DAE /* DictMapValue.swift in Sources */,
@@ -529,8 +585,9 @@
 				18B2CC2C2420C45800104613 /* UDMapperParam.swift in Sources */,
 				18BCFB582455BB270064D17C /* DataStoreItem.swift in Sources */,
 				18B2CC222420BF5E00104613 /* UDCoding.swift in Sources */,
-				18BCFB602455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */,
+				18BCFB602455BEF30064D17C /* StoreDataUD.swift in Sources */,
 				18B2CC2F2420C5AF00104613 /* SimpleStore.swift in Sources */,
+				18FA58FF2458041300E0F356 /* StoreKeychain.swift in Sources */,
 				18B2CC292420C3AD00104613 /* UDMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +605,7 @@
 				18D5C29F2420EACE00DBDC13 /* UDStoreTests.swift in Sources */,
 				18ACDDF82454780900723DAE /* UserManager.swift in Sources */,
 				18D5C2992420E69700DBDC13 /* AppUDMapperStoreItem.swift in Sources */,
+				18FA59072458248D00E0F356 /* KeychainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,20 +614,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ACDDCD24543D5800723DAE /* CodableDictStoreItem.swift in Sources */,
-				18BCFB652455CD170064D17C /* SimpleStoreUD.swift in Sources */,
+				18BCFB652455CD170064D17C /* StoreUD.swift in Sources */,
 				18D5C2BD2420ED2600DBDC13 /* DictMapperStoreItem.swift in Sources */,
 				18ACDDC52454321A00723DAE /* DictStoreItem.swift in Sources */,
 				18D5C2BE2420ED2600DBDC13 /* UDMapperStoreItem.swift in Sources */,
+				18FA590424581A5600E0F356 /* Keychain.swift in Sources */,
 				18BCFB5D2455BC520064D17C /* CodableDataStoreItem.swift in Sources */,
 				18BCFB692455CD8B0064D17C /* StoreItem.swift in Sources */,
 				18ACDDC9245435FF00723DAE /* DictMapValue.swift in Sources */,
 				18D5C2BF2420ED2600DBDC13 /* SimpleStore.swift in Sources */,
-				18D5C2C02420ED2600DBDC13 /* SimpleStoreDictUD.swift in Sources */,
+				18D5C2C02420ED2600DBDC13 /* StoreDictUD.swift in Sources */,
 				18D5C2C12420ED2600DBDC13 /* UDCoding.swift in Sources */,
 				18BCFB592455BB270064D17C /* DataStoreItem.swift in Sources */,
 				18D5C2C22420ED2600DBDC13 /* DictMapper.swift in Sources */,
-				18BCFB612455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */,
+				18BCFB612455BEF30064D17C /* StoreDataUD.swift in Sources */,
 				18D5C2C32420ED2600DBDC13 /* UDMapper.swift in Sources */,
+				18FA59002458041300E0F356 /* StoreKeychain.swift in Sources */,
 				18D5C2C42420ED2600DBDC13 /* UDMapperParam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +647,7 @@
 				18D5C2C92420ED3A00DBDC13 /* AppUDMapperStoreItem.swift in Sources */,
 				18ACDDF92454780900723DAE /* UserManager.swift in Sources */,
 				18D5C2C52420ED3A00DBDC13 /* MapperTests.swift in Sources */,
+				18FA59082458248D00E0F356 /* KeychainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,20 +656,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ACDDCE24543D5800723DAE /* CodableDictStoreItem.swift in Sources */,
-				18BCFB662455CD170064D17C /* SimpleStoreUD.swift in Sources */,
+				18BCFB662455CD170064D17C /* StoreUD.swift in Sources */,
 				18D5C2D92420EE3400DBDC13 /* DictMapperStoreItem.swift in Sources */,
 				18ACDDC62454321A00723DAE /* DictStoreItem.swift in Sources */,
 				18D5C2DA2420EE3400DBDC13 /* UDMapperStoreItem.swift in Sources */,
+				18FA590524581A5600E0F356 /* Keychain.swift in Sources */,
 				18BCFB5E2455BC520064D17C /* CodableDataStoreItem.swift in Sources */,
 				18BCFB6A2455CD8B0064D17C /* StoreItem.swift in Sources */,
 				18ACDDCA245435FF00723DAE /* DictMapValue.swift in Sources */,
 				18D5C2DB2420EE3400DBDC13 /* SimpleStore.swift in Sources */,
-				18D5C2DC2420EE3400DBDC13 /* SimpleStoreDictUD.swift in Sources */,
+				18D5C2DC2420EE3400DBDC13 /* StoreDictUD.swift in Sources */,
 				18D5C2DD2420EE3400DBDC13 /* UDCoding.swift in Sources */,
 				18BCFB5A2455BB270064D17C /* DataStoreItem.swift in Sources */,
 				18D5C2DE2420EE3400DBDC13 /* DictMapper.swift in Sources */,
-				18BCFB622455BEF30064D17C /* SimpleStoreDataUD.swift in Sources */,
+				18BCFB622455BEF30064D17C /* StoreDataUD.swift in Sources */,
 				18D5C2DF2420EE3400DBDC13 /* UDMapper.swift in Sources */,
+				18FA59012458041300E0F356 /* StoreKeychain.swift in Sources */,
 				18D5C2E02420EE3400DBDC13 /* UDMapperParam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

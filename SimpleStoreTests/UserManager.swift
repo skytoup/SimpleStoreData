@@ -9,7 +9,7 @@
 import Foundation
 @testable import SimpleStore
 
-class UserDictManager: SimpleStoreDictUD<UserStoreItem> {
+class UserDictManager: StoreDictUD<UserStoreItem> {
     static let UDKey = "__user_dict__"
     static let shared = UserDictManager(udKey: UDKey)
     
@@ -18,12 +18,19 @@ class UserDictManager: SimpleStoreDictUD<UserStoreItem> {
     }
 }
 
-class UserDataManager: SimpleStoreDataUD<UserStoreItem> {
+class UserDataUDManager: StoreDataUD<UserStoreItem> {
     static let UDKey = "__user_data__"
     static let shared = UserDictManager(udKey: UDKey)
     
     func resetDatas() {
         item = Item()
     }
+}
+
+class UserDataKcManager: StoreKeychain<UserStoreItem> {
+    static let shared = UserDataKcManager(service: "test", account: "test")
     
+    func resetDatas() {
+        item = Item()
+    }
 }

@@ -54,7 +54,7 @@ struct SettingStoreItem: UDMapperStoreItem {
     }
 }
 
-class UserManager: SimpleStoreDictUD<UserStoreItem> {
+class UserManager: StoreDictUD<UserStoreItem> {
     static let shared = UserManager(udKey: "__User__")
     
     // 这里可以添加一些业务方法
@@ -64,10 +64,12 @@ class UserManager: SimpleStoreDictUD<UserStoreItem> {
 class AppManager {
     static let shared = AppManager()
     
-    @SimpleStoreDictUDW<UserStoreItem>(udKey: "__AppUser__") var user
-    @SimpleStoreDictUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
-    @SimpleStoreDictUDW<FavouriteItem>(udKey: "__AppFavourite__") var favourite
-    @SimpleStoreDataUDW<FavouriteItem>(udKey: "__AppFavouriteData__") var favouriteData
+    @StoreDictUDW<UserStoreItem>(udKey: "__AppUser__") var user
+    @StoreDictUDW<SettingStoreItem>(udKey: "__AppSetting__") var setting
+    @StoreDictUDW<FavouriteItem>(udKey: "__AppFavourite__") var favourite
+    @StoreDataUDW<FavouriteItem>(udKey: "__AppFavouriteData__") var favouriteData
+    
+    @StoreKeychainW<FavouriteItem>(service: "test", account: "test") var favouriteKc
 }
 
 func cleanDatas() {
@@ -84,6 +86,7 @@ func cleanDatas() {
     AppManager.shared.setting = .init()
     AppManager.shared.favourite = .init()
     AppManager.shared.favouriteData = .init()
+//    AppManager.shared.favouriteKc = .init()
 }
 
 func example_0() {
@@ -143,6 +146,10 @@ func example_1() {
     am.favouriteData.cat = "world data"
     am.favouriteData.dog = "hello data"
     print("favourite data修改后 \(UserDefaults.standard.data(forKey: "__AppFavouriteData__") ?? Data())")
+    
+    print("favourite kc data修改前 \(am.favouriteKc)")
+    am.favouriteKc.cat = "kc workd data"
+    am.favouriteKc.dog = "kc hello data"
     
     print("\n----- \(#function)结束 -----\n\n")
 }
