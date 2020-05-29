@@ -39,21 +39,21 @@
 在你的`Podfile`文件中添加
 
 ```ruby
-pod 'SimpleStoreData', '0.1.1'
+pod 'SimpleStoreData', '0.1.2'
 ```
 
 ### Carthage
 在你的`Cartfile`文件中添加
 
 ```
-github "skytoup/SimpleStoreData" ~> 0.1.1
+github "skytoup/SimpleStoreData" ~> 0.1.2
 ```
 
 ### Swift Package Manager
 在你的`Package.swift`文件中添加到`dependencies`内
 
 ```swift
-.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.1.1"))
+.package(url: "https://github.com/skytoup/SimpleStoreData", .upToNextMajor(from: "0.1.2"))
 ```
 
 

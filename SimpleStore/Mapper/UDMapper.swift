@@ -35,8 +35,8 @@ public struct AssignUDMapper: UDMapper {
     public func map<T>(_ field: inout T, key: String, default defaultValue: T) {
         precondition(((T.self as? UDCoding.Type) != nil), "\(field)(\(T.self)) need impl UDCoding")
         
-        if let val = dict[key] as? T as? UDCoding {
-            field = ((T.self as! UDCoding.Type).fromUDAny(val) as? T) ?? defaultValue
+        if let _val = dict[key], let val = (T.self as! UDCoding.Type).fromUDAny(_val) as? T {
+            field = val
         } else {
             field = defaultValue
         }

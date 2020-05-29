@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 ~~`SimpleStoreData` adheres to [Semantic Versioning](https://semver.org/).~~(暂时未稳定, 可能会改动类名、方法名等...)
 
 
+## [0.1.2](https://github.com/skytoup/SimpleStoreData/releases/tag/0.1.1)
+Released on 2020-05-29
+
+#### Fixed
+- 修复`UDMapper`无法读取自定义`UDCoding`数据
+
+---
+
 ## [0.1.1](https://github.com/skytoup/SimpleStoreData/releases/tag/0.1.1)
 Released on 2020-04-28
 
